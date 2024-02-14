@@ -12,6 +12,9 @@ function calculateTriangle(){
     triangleResult.innerText = area;
     baseInput.value = '';
     heightInput.value = '';
+
+    const finalResult = document.getElementById('final-result');
+    finalResult.innerText = 'Area = ' + area + ' cm2' ;
 }
 
 // rectangle 
