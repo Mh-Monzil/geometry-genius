@@ -17,7 +17,7 @@
     </style>
 </head>
 <body class="text-black p-12">
-    <header class="bg-teal-100 rounded-md px-6 py-3 flex justify-between items-center max-w-[1170px] mx-auto">
+    <header class="bg-teal-100 rounded-md px-6 py-3 flex flex-col sm:flex-row justify-between items-center w-full md:max-w-[1170px] mx-auto">
         <div>
             <h1 class="text-4xl font-bold">Interactive</h1>
             <p class="text-2xl font-medium text-gray-500">Geometry Genius</p>
@@ -35,7 +35,7 @@
         <!-- left section  -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-5">
             <!-- triangle  -->
-            <div class="card bg-white max-w-96 mx-auto shadow-xl">
+            <div class="card bg-white w-full md:w-96 mx-auto shadow-xl">
                 <figure class="px-10 pt-10">
                     <img src="images/triangle.png" alt="Shoes" class="rounded-xl" />
                 </figure>
@@ -43,46 +43,54 @@
                     <h2 class="card-title">Triangle!</h2>
                     <p>Area: (A) = 0.5 x b x h</p>
                     <div class="flex space-x-2 items-center">
-                        <input id="base" type="text" class="w-24 h-10 p-2 rounded-md text-white font-medium text-md" placeholder="base">
+                        <input id="base" type="number" class="w-24 h-10 p-2 rounded-md text-white font-medium text-md" placeholder="base">
                         <span>cm</span>
-                        <input id="height" type="text" class="w-24 h-10 p-2 rounded-md text-white font-medium text-md" placeholder="height">
+                        <input id="height" type="number" class="w-24 h-10 p-2 rounded-md text-white font-medium text-md" placeholder="height">
                         <span>cm</span>
                     </div>
                     <p class="font-bold">Area: <span id="triangle-result"></span>cm<sup>2</sup></p>
-                    <button id="calculate-triangle" class="bg-blue-500 text-white w-full py-3 rounded-lg mt-2 font-medium text-lg">Calculate</button>
+                    <button onclick="calculateTriangle()" id="calculate-triangle" class="bg-blue-500 text-white w-full py-3 rounded-lg mt-2 font-medium text-lg">Calculate</button>
                 </div>
             </div>
 
             <!-- rectangle  -->
-            <div class="card bg-white max-w-96 mx-auto shadow-xl">
+            <div class="card bg-white w-full md:w-96 mx-auto shadow-xl">
                 <figure class="px-10 pt-10">
-                    <img src="images/triangle.png" alt="Shoes" class="rounded-xl" />
+                    <img src="images/rectangle.png" alt="Shoes" class="rounded-xl" />
                 </figure>
                 <div class="card-body items-center text-center">
-                    <h2 class="card-title">Shoes!</h2>
-                    <p>If a dog chews shoes whose shoes does he choose?</p>
-                    <div class="card-actions">
-                        <button class="btn btn-primary">Buy Now</button>
+                    <h2 class="card-title">Rectangle!</h2>
+                    <p>Area: (A) = w x l</p>
+                    <div class="flex space-x-2 items-center">
+                        <input id="width" type="number" class="w-24 h-10 p-2 rounded-md text-white font-medium text-md" placeholder="width">
+                        <span>cm</span>
+                        <input id="length" type="number" class="w-24 h-10 p-2 rounded-md text-white font-medium text-md" placeholder="length"> 
+                        <span>cm</span>
                     </div>
+                    <p class="font-bold">Area: <span id="rectangle-result"></span>cm<sup>2</sup></p>
+                    <button onclick="calculateRectangle()" id="calculate-triangle" class="bg-blue-500 text-white w-full py-3 rounded-lg mt-2 font-medium text-lg">Calculate</button>
                 </div>
             </div>
 
-            <!-- rectangle  -->
-            <div class="card bg-white max-w-96 mx-auto shadow-xl">
+            <!-- parallelogram  -->
+            <div class="card bg-white w-full md:w-96 mx-auto shadow-xl">
                 <figure class="px-10 pt-10">
-                    <img src="images/triangle.png" alt="Shoes" class="rounded-xl" />
+                    <img src="images/parallelogram.png" alt="Shoes" class="rounded-xl" />
                 </figure>
                 <div class="card-body items-center text-center">
-                    <h2 class="card-title">Shoes!</h2>
-                    <p>If a dog chews shoes whose shoes does he choose?</p>
-                    <div class="card-actions">
-                        <button class="btn btn-primary">Buy Now</button>
+                    <h2 class="card-title">Parallelogram!</h2>
+                    <p>Area: (A) = b x h</p>
+                    <div class="flex space-x-2 items-center">
+                        <input id="parallelogram-base" type="number" class="w-24 h-10 p-2 rounded-md text-white font-medium text-md" placeholder="base">
+                        <span>cm</span>
+                        <input id="parallelogram-height" type="number" class="w-24 h-10 p-2 rounded-md text-white font-medium text-md" placeholder="height">
+                        <span>cm</span>
                     </div>
+                    <p class="font-bold">Area: <span id="parallelogram-result"></span>cm<sup>2</sup></p>
+                    <button onclick="calculateParallelogram()" id="calculate-parallelogram" class="bg-blue-500 text-white w-full py-3 rounded-lg mt-2 font-medium text-lg">Calculate</button>
                 </div>
             </div>
 
-            <!-- rectangle  -->
-            <div class="w-96 h-96 bg-teal-200"></div>
         </div>
 
         
